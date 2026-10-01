@@ -20,6 +20,7 @@ import {
   WalletCards,
   Tag,
   X,
+  ListOrdered,
 } from "lucide-react";
 
 import logo from "../images/logo.png";
@@ -54,6 +55,7 @@ const navigationItems = [
   },
 
   { href: "/newsletter", label: "Newsletter", icon: Mail },
+  { href: "/waitlists", label: "Waitlists", icon: ListOrdered },
   { href: "/admin", label: "Admin", icon: UsersRound },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
