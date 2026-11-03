@@ -365,6 +365,11 @@ export default function TransactionsPage() {
                         {typeof tx.totalAmount === "number"
                           ? `$${tx.totalAmount.toFixed(2)}`
                           : "N/A"}
+                        {Boolean(tx.gstAmount && tx.gstAmount > 0) && (
+                          <div className="text-[11px] font-medium text-slate-400">
+                            +${tx.gstAmount?.toFixed(2)} tax
+                          </div>
+                        )}
                       </td>
 
                       {/* Fee */}

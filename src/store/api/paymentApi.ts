@@ -29,12 +29,15 @@ export type Payment = {
   paymentBreakdownId?: string;
   subtotal: number;
   shippingFee: number;
+  gstAmount?: number;
   totalAmount: number;
   stripeFee: number;
   platformFee: number;
   organizerAmount: number;
   organizerAmountWithoutShipping: number;
+  organizerRaisedAmount?: number;
   discountAmount: number;
+  stripeTaxTransactionId?: string | null;
   status: PaymentStatus;
   paidAt: string | null;
   createdAt: string;
