@@ -74,7 +74,7 @@ export default function VerifyCodeContent() {
   const handleResend = async () => {
     try {
       const res = await resendOtp({ email }).unwrap();
-      toast.success(res.message || "OTP resent!");
+      toast.success(res.message || "A new OTP has been sent. Please check your spam or junk mail.");
     } catch (err) {
       toast.error(getErrorMessage(err));
     }
@@ -89,6 +89,9 @@ export default function VerifyCodeContent() {
           We sent a reset link to {email || "your email"}
           <br />
           enter 6 digit code that is mentioned in the email
+        </p>
+        <p className="mt-2 text-xs text-slate-400">
+          Please check your spam or junk mail. If the first code does not work, request another one.
         </p>
       </div>
 
