@@ -7,7 +7,7 @@ import {
 } from "@reduxjs/toolkit/query/react";
 
 const rawBaseQuery = fetchBaseQuery({
-  baseUrl: process.env.NEXT_PUBLIC_API_URL,
+  baseUrl: process.env.NEXT_PUBLIC_API|| "https://server.funraisingit.com/api/v1" ,
 
   prepareHeaders: (headers) => {
     if (typeof window !== "undefined") {
